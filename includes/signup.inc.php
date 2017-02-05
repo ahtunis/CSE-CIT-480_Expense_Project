@@ -39,6 +39,27 @@ if (empty($pwd)){
 			$sql="INSERT INTO user (first,last,email,uid,pwd) VALUES('$first','$last','$email','$uid','$pwd')";
 			$result= mysqli_query($conn,$sql);
 
+			
+			
+			
+			$message = "Welcome to Expense Master. We hope we can fill all your needs for expense reporting and submitting!"
+			
+			if(!isset($_POST['submit']))
+			{
+				echo "error; You need to submit the form!";
+			}
+		
+			$email_from = 'ExpenseReports@expensemaster.com';
+			$email_subject = "Welcome to Expense Master";
+			$email_body = "$message".
+		
+			
+			$to = "$email";
+			$headers = "From: $email_from \r\n";
+			$headers .= "Reply-To: $email \r\n";
+			
+			mail($to,$email_subject,$email_body,$headers);
+		
 			header("Location: ../confirm.php");
 		}	
 	}

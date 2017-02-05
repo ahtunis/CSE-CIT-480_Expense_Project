@@ -50,11 +50,11 @@
 
     				  <input type="text" class="required" name="last" placeholder="Last name" tabindex="2" style="margin-bottom: 5px"><sup class="required" title="Required"></sup>
 
-    				  <input type="email" class="required" name="email" placeholder="email" tabindex="3" style="margin-bottom: 5px"><sup class="required" title="Required"></sup>
+    				  <input type="email" class="required" name="email" placeholder="Email" tabindex="3" style="margin-bottom: 5px"><sup class="required" title="Required"></sup>
 
-              <input type="text" class="required" name="uid" placeholder="username" tabindex="4" style="margin-bottom: 5px"><sup class="required" title="Required"></sup>
-
-    				  <input type="password" class="required" name="pwd" placeholder="password" tabindex="5" style="margin-bottom: 5px"><sup class="required" title="Required"></sup>
+             			 <input type="text" class="required" name="uid" placeholder="Username" tabindex="4" style="margin-bottom: 5px"><sup class="required" title="Required"></sup>
+	
+    				  <input type="password" class="required" name="pwd" placeholder="Password" tabindex="5" style="margin-bottom: 5px"><sup class="required" title="Required"></sup>
     				  <br><br>
     				<input class="btn btn-alt full-width" href="http://localhost/ExpenseMaster/confirm.php" disabled="disabled" tabindex="7" type="submit" value="Create Account" />
     				</div>

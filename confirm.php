@@ -18,12 +18,12 @@
   <body class="signup"><noscript><iframe height="0" src="//www.googletagmanager.com/ns.html?id=GTM-JD26" style="display:none;visibility:hidden" width="0"></iframe></noscript>
     <div class="signup-page">
       <div class="header-main">
-        <a class="header-logo" href="http://localhost/ExpenseMaster/index.php"></a>
+        <a class="header-logo" href="index.php"></a>
         <div class="header-login">
 			<!-- Login Redirect to a page at # 
 			<a class="btn btn-sm btn-alt" href="#">Log in</a>
 			 Logout Redirect to a page at # -->
-			<a class="btn btn-sm btn-alt" href="http://localhost/ExpenseMaster/index.php">Home</a>
+			<a class="btn btn-sm btn-alt" href="index.php">Home</a>
         </div>
       </div>
       <div class="signup-content">

@@ -2,6 +2,7 @@
     session_start();
     session_unset();
     session_destroy();
-    header('Location: http://localhost/ExpenseMaster/index.php');
+    unset($_SESSION["user"]); 
+    header('Location: index.php');
     exit;
 ?>

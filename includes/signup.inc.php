@@ -1,7 +1,7 @@
 <?php
 session_start();
 include '../dbh.php';
-require 'email.php';
+require '../usersession.php';
 
 $first=$_POST['first'];
 $last=$_POST['last'];
@@ -47,7 +47,7 @@ if (empty($pwd)){
 			// sets session variable for user to userID from db
 			$_SESSION['user'] = $user['userId'];
 					
-			SetupEmail();
+			SendEmail($email);
 			
 			header("Location: ../confirm.php");
 			
@@ -57,7 +57,7 @@ if (empty($pwd)){
 	}	
 	
 	
-	function SendEmail(){
+	function SendEmail($email){
 		
 					
 			$message = "Welcome to Expense Master. We hope we can fill all your needs for expense reporting and submitting!";

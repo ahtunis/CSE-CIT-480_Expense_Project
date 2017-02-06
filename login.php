@@ -7,6 +7,8 @@
 	}elseif (strpos($url,'error=username')!==false){
 		echo "Username already exists. Please choose another.";
 	}
+	
+	require("usersession.php");
 ?>
 
 <!DOCTYPE html>

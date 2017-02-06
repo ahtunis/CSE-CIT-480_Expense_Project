@@ -7,33 +7,17 @@
 	}elseif (strpos($url,'error=username')!==false){
 		echo "Username already exists. Please choose another.";
 	}
+	
+	require("usersession.php");
 ?>
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta content="text/html; charset=utf-8" http-equiv="Content-type" />
-    <title>Expense Master | Sign up</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="style.css" rel="stylesheet" />
-	<!-- Favorite Icon -->
-	<link rel="shortcut icon" href="/images/specialicon.ico" type="image/x-icon" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta content="Sign up for a free Expense Master account." name="description" />
-    <!-- Logo Redirect to a page at # -->
-	<link href="index.php" rel="canonical" />
-  </head>
+<?php include 'htmlhead.html';?>
+
   <body class="signup"><noscript><iframe height="0" src="//www.googletagmanager.com/ns.html?id=GTM-JD26" style="display:none;visibility:hidden" width="0"></iframe></noscript>
     <div class="signup-page">
-      <div class="header-main">
-        <a class="header-logo" href="index.php"></a>
-        <div class="header-login">
-			<!-- Login Redirect to a page at # -->
-			<a class="btn btn-sm btn-alt" href="login.php">Sign in</a>
-			<!-- Logout Redirect to a page at # 
-			<a class="btn btn-sm btn-alt" href="#">Log Out</a>-->
-        </div>
-      </div>
+    	<?php include 'header.php'?>
       <div class="signup-content">
         <div class="benefits page-body">
           <h3>Free account</h3>

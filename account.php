@@ -1,5 +1,6 @@
 <?php
-	session_start();
+
+	require("usersession.php");
 ?>
 
 <!DOCTYPE html>
@@ -17,15 +18,7 @@
   </head>
   <body class="signup"><noscript><iframe height="0" src="//www.googletagmanager.com/ns.html?id=GTM-JD26" style="display:none;visibility:hidden" width="0"></iframe></noscript>
     <div class="signup-page">
-      <div class="header-main">
-        <a class="header-logo" href="http://localhost/ExpenseMaster/index.php"></a>
-        <div class="header-login">
-			<!-- Login Redirect to a page at # 
-			<a class="btn btn-sm btn-alt" href="#">Log in</a>
-			 Logout Redirect to a page at # -->
-			<a class="btn btn-sm btn-alt" href="http://localhost/ExpenseMaster/logout.php">Log Out</a>
-        </div>
-      </div>
+     <?php include "header.php"?>
       <div class="signup-content">
         <div class="benefits page-body">
           <h3>Welcome to your Account Page</h3>

@@ -1,6 +1,7 @@
 <?php
 session_start();
 include '../dbh.php';
+require('../usersession.php');
 
 $uid=$_POST['uid'];
 $pwd=$_POST['pwd'];
@@ -13,13 +14,19 @@ if (empty($pwd)){
 	header("Location: ../login.php?error=empty");
 	exit();
 }else{
-	$sql = "SELECT * FROM user WHERE uid='$uid' AND pwd='$pwd'";
-	$result= mysqli_query($conn,$sql);
 
-	if(!$row=mysqli_fetch_assoc($result)){
+	$useridquery = mysqli_query($conn, "SELECT * FROM users WHERE uid='$uid' AND password='$pwd'");
+	$user= mysqli_fetch_assoc($useridquery);
+	
+	// sets session variable for user to userID from db
+	$_SESSION['user'] = $user['userId'];
+	
+
+	if(!isset($user)){
 		echo "Your username or password is incorrect";
-	}else{
-		$_SESSION['id'] = $row['id'];
+	}else		
+		// sets session variable for user to userID from db
+		$_SESSION['user'] = $user['userId'];
 	}
 	header("Location: ../account.php");
-}
+

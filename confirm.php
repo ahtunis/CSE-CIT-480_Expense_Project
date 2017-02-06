@@ -1,6 +1,19 @@
 <?php
 	session_start();
-?>
+	include 'dbh.php';
+	
+	$userId = $_SESSION['user'];
+	$sql = mysqli_query($conn, "SELECT * FROM users WHERE userId= '$userId'");
+	$userarray= mysqli_fetch_assoc($sql);
+	$user = $userarray['userId'];
+	 
+
+	//$useridquery = mysqli_query($conn, "SELECT * FROM users WHERE email = '1@1.com' LIMIT 1");
+	//$userarray = mysqli_fetch_assoc($useridquery);
+	
+	// sets session variable for user to userID from db
+	
+?>	
 
 <!DOCTYPE html>
 <html>
@@ -23,13 +36,16 @@
 			<!-- Login Redirect to a page at # 
 			<a class="btn btn-sm btn-alt" href="#">Log in</a>
 			 Logout Redirect to a page at # -->
+			 <a class="btn btn-sm btn-alt" href="settings.php"> <?php  echo "Hello, " .$userarray['firstName']. "." ?></a>
 			<a class="btn btn-sm btn-alt" href="index.php">Home</a>
         </div>
       </div>
       <div class="signup-content">
         <div class="benefits page-body">
-          <h3>Congratulations your now registered!</h3>
-          <p>Please check your email and confirm your account.</p>
+          <h3>Congratulations you're now registered!</h3>
+          <p>Please check your email and confirm your account.
+          
+          <?php echo "hello" .$user. "."  ?> </p>
         </div>		
         <div class="signup page-sidebar"><p class="alert alert-error" id="fill-all-fields" style="display:none"></p>
           <img src="./images/check.png" alt="Success" style="width:256px;height:256px;">
